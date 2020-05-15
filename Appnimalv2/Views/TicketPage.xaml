@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:zxcm="clr-namespace:ZXing.Common;assembly=zxing.portable" xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+             mc:Ignorable="d"
+             x:Class="Appnimalv2.TicketPage"
+             Title="Ticket" BackgroundColor="Green">
+    <ContentPage.Content>
+        <Frame BorderColor="Green"
+                   Margin="10"
+                   BackgroundColor="Black" Opacity=".8" HasShadow="True">
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <StackLayout VerticalOptions="CenterAndExpand">
+                    <zxing:ZXingBarcodeImageView x:Name="BarcodeImageView" BarcodeFormat="QR_CODE" IsVisible="false" BarcodeValue="Foo">
+                        <zxing:ZXingBarcodeImageView.BarcodeOptions>
+                            <zxcm:EncodingOptions Width="500" Height="500" />
+                        </zxing:ZXingBarcodeImageView.BarcodeOptions>
+                    </zxing:ZXingBarcodeImageView>
+                    <Label Text="Código" HorizontalOptions="Center" VerticalOptions="Center" x:Name="codigo" IsVisible="False"/>
+                </StackLayout>
+                <Button Text="Generate QR Code" x:Name="generateqr" WidthRequest="200" HorizontalOptions="Center" VerticalOptions="EndAndExpand" Clicked="generateqr_Clicked" />
+            </StackLayout>
+
+        </Frame>
+        
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Appnimalv2.Views.Mapa"
+             BackgroundImageSource="fpr.png">
+    <ContentPage.Content>
+        <Frame BorderColor="Green"
+                   Margin="10"
+                   BackgroundColor="Black" Opacity=".8" HasShadow="True" >
+            <StackLayout>
+                <StackLayout>
+                    <Label x:Name="ajio" IsVisible="False"/>
+                    <Label Text="Eliga un animal" Style="{StaticResource ProfileNameLabel}" TextColor="White" FontSize="25"/>
+                    <Picker x:Name="anim" BackgroundColor="Gray" Opacity=".6" TextColor="White" FontSize="20" SelectedIndexChanged="anim_SelectedIndexChanged">
+                        <Picker.Items>
+                            <x:String>Aves del amazonas</x:String>
+                            <x:String>Bisontes americanos</x:String>
+                            <x:String>Buffalos acuáticos</x:String>
+                            <x:String>Cabras</x:String>
+                            <x:String>Caimanes</x:String>
+                            <x:String>Cerdo Vietnamita</x:String>
+                            <x:String>Conejos</x:String>
+                            <x:String>Guacamayas y coquenas</x:String>
+                            <x:String>Jaguares</x:String>
+                            <x:String>jaula de vuelo</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Image x:Name="animal" WidthRequest="500" HeightRequest="500" VerticalOptions="CenterAndExpand"/>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+            
+    </ContentPage.Content>
+</ContentPage>

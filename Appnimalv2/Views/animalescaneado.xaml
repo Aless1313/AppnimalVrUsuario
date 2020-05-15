@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Appnimalv2.Views.animalescaneado"
+             Title="Información"
+             BackgroundColor="Green">
+    <ContentPage.Content>
+        <Frame
+        BorderColor="Green"
+                   Margin="5"
+                   BackgroundColor="Black" Opacity=".8" HasShadow="True">
+            <StackLayout>
+                <Label
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+                   x:Name="lbl_animal" Style="{StaticResource ProfileTagLabel}" TextColor="White" FontSize="35"/>
+                <Image x:Name="imagenanimal" WidthRequest="500" HeightRequest="400" VerticalOptions="Start"/>
+                <Label x:Name="lbl_Info" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" HorizontalTextAlignment="Center" Style="{StaticResource MainBodyLabel}" TextColor="White"/>
+                <Label x:Name="lbl_curiosidad" VerticalOptions="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center" Style="{StaticResource MainBodyLabel}" TextColor="White"/>
+            </StackLayout> 
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

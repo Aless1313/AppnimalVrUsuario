@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Appnimalv2.Horarios"
+             Title="Horarios"
+             BackgroundImageSource="fs.png">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BorderColor="Green"
+                   Margin="10"
+                   BackgroundColor="Black" Opacity=".8" HasShadow="True" >
+                
+                <StackLayout Padding="10,10,10,10">
+                    <Label x:Name="userrr" IsVisible="False"/>
+                    <Label Text="" TextColor="White" FontSize="40" HorizontalOptions="Center" HorizontalTextAlignment="Center" Style="{StaticResource ProfileNameLabel}"></Label>
+                    <StackLayout>
+                        <Label Text=""/>
+                        <Label Text="*Paseo La Pastora: Martes a domingo de 10:00 a 23:00 horas" FontSize="25" TextColor="White" Style="{StaticResource ProfileNameLabel}" ></Label>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text=""/>
+                        <Label Text=""/>
+                        <Label Text="*Zoológico La Pastora: Martes a Domingo de 10:00 a 17:00 horas" FontSize="25" TextColor="White" Style="{StaticResource ProfileNameLabel}"></Label>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text=""/>
+                        <Label Text=""/>
+                        <Label Text="*Taquilla: Martes a Domingo de 10:00 a 16:30 horas" FontSize="25" TextColor="White" Style="{StaticResource ProfileNameLabel}"></Label>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text=""/>
+                        <Label Text=""/>
+                        <Label Text="*Nota: Abierto en días festivos y temporada vacacional." FontSize="25" TextColor="White" Style="{StaticResource ProfileNameLabel}"></Label>
+                        <Label Text=""/>
+                        <Label Text=""/>
+                        <Label Text=""/>
+                        <Label Text=""/>
+                        <Button Text="Agendar visita guiada" Style="{StaticResource FollowButton}" TextColor="Black" Padding="10" x:Name="btn_agendar" Clicked="btn_agendar_Clicked"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

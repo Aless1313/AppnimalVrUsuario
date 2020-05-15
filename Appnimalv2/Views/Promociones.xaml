@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Appnimalv2.Views.Promociones"
+             Title="Promociones"
+             BackgroundImageSource="fs.png">
+    
+    <ContentPage.Content>
+        <Frame BorderColor="Green"
+                   Margin="10"
+                   BackgroundColor="Black" Opacity=".8" HasShadow="True">
+            <StackLayout>
+                <Image Source="promo.jpg" WidthRequest="500" HeightRequest="400"/>
+                <Image Source="promo2.jpg" WidthRequest="500" HeightRequest="400"/>
+            </StackLayout>
+        </Frame>
+        
+    </ContentPage.Content>
+</ContentPage>

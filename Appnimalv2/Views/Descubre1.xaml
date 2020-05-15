@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Appnimalv2.Views.Descubre1"
+             BackgroundImageSource="ft.png"
+             Title="Descubre +">
+    <ContentPage.Content>
+        <ScrollView>
+            <Frame BorderColor="Green"
+                   Margin="10"
+                   BackgroundColor="Black" Opacity=".8" HasShadow="True">
+                <StackLayout>
+                    <Label FontSize="Large" TextColor="White" Text="¿Como se usa?" HorizontalOptions="CenterAndExpand" Style="{StaticResource ProfileNameLabel}" >
+
+                    </Label>
+                    <Image  Source="QR.png"></Image>
+
+                    <StackLayout Padding="15" >
+
+                        <Label  TextColor="White" Text="Paso 1. Escanea el código QR que viene en la parte del mostrador con la ayuda de el botón que abre tu cámara" Style="{StaticResource MainBodyLabel}"></Label>
+
+                        <Label  FontAttributes="Bold" TextColor="White" Text="Nota: El codigo QR es similar al que se muestra en la parte superior" Style="{StaticResource MainBodyLabel}"></Label>
+
+                        <Label TextColor="White" Text="Paso 2. Despues de escanear, te vendrán datos informativos acerca de la  especia que se encuentra frente a ti" Style="{StaticResource MainBodyLabel}"></Label>
+
+                        <Button x:Name="BotonScaner" Clicked="BotonScaner_Clicked_1" Text="Escanear codigo QR" Style="{StaticResource FollowButton}" TextColor="Black"></Button>
+                    </StackLayout >
+                </StackLayout>
+            </Frame>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Appnimalv2.Compraboletos"
+             Title="Compra de boletos"
+             BackgroundImageSource="ft.png">
+    <ContentPage.Content>
+        <Frame BorderColor="Green"
+                   Margin="10"
+                   BackgroundColor="Black" Opacity=".8" HasShadow="True" >
+            <StackLayout >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label FontSize="Medium" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="COSTOS" TextColor="White" HorizontalOptions="Center" HorizontalTextAlignment="Center" Style="{StaticResource ProfileNameLabel}"></Label>
+
+                    <Label FontSize="Small" Grid.Row="1" Grid.Column="0" Text="Niños menores de 5 años" HorizontalTextAlignment="Center" HorizontalOptions="Center" Style="{StaticResource MainBodyLabel}" TextColor="White"></Label>
+                    <Label FontSize="Small" Grid.Row="2" Grid.Column="0" Text="Entrada Gratuita" HorizontalTextAlignment="Center" HorizontalOptions="Center" Style="{StaticResource MainBodyLabel}" TextColor="White"></Label>
+
+                    <Label FontSize="Small" Grid.Row="1" Grid.Column="1" Text="Niños de 6 a 12 años" HorizontalTextAlignment="Center" HorizontalOptions="Center" Style="{StaticResource MainBodyLabel}" TextColor="White"></Label>
+                    <Label FontSize="Small" Grid.Row="2" Grid.Column="1" Text="$15"  HorizontalTextAlignment="Center" HorizontalOptions="Center" Style="{StaticResource MainBodyLabel}" TextColor="White"></Label>
+
+                    <Label FontSize="Small" Grid.Row="1" Grid.Column="2" Text="Mayores de 12 años" HorizontalTextAlignment="Center" HorizontalOptions="Center" Style="{StaticResource MainBodyLabel}" TextColor="White"></Label>
+                    <Label FontSize="Small" Grid.Row="2" Grid.Column="2" Text="$30"  HorizontalTextAlignment="Center" HorizontalOptions="Center" Style="{StaticResource MainBodyLabel}" TextColor="White"></Label>
+                </Grid>
+                <StackLayout VerticalOptions="Center">
+                    <Label Text="Selecciona cantidad" TextColor="Black" HorizontalOptions="Center"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Label HorizontalOptions="Start" Grid.Column="0" Grid.Row="0" TextColor="White" Text="Adulto:" Style="{StaticResource ProfileNameLabel}" Padding="5,0,90,0"></Label>
+                        <Entry Keyboard="Numeric" HorizontalOptions="End" x:Name="CantAdulto" Grid.Column="1" Grid.Row="0" BackgroundColor="Gray" Opacity=".5"  MaxLength="2" WidthRequest="200" ></Entry>
+
+                        <Label  Grid.Column="0" Grid.Row="1"  TextColor="White" HorizontalOptions="Start"  Text="Niño:"  Style="{StaticResource ProfileNameLabel}" Padding="5,0,90,0"></Label>
+                        <Entry Keyboard="Numeric" HorizontalOptions="End" x:Name="CantNiños" Grid.Column="1" Grid.Row="1" BackgroundColor="Gray" Opacity=".5" MaxLength="2" WidthRequest="200" ></Entry>
+
+                        <Label HorizontalOptions="Start" Grid.Column="0" Grid.Row="2" Text="Total:" TextColor="White"  Style="{StaticResource ProfileNameLabel}" Padding="5,0,90,0" ></Label>
+                        <Entry IsReadOnly="True" HorizontalOptions="End" x:Name="TotalPaga" Grid.Column="1" Grid.Row="2" BackgroundColor="Gray" Opacity=".5" MaxLength="2" WidthRequest="200" Keyboard="Numeric" ></Entry>
+                    </Grid>
+                </StackLayout>
+                <StackLayout>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button Text="PayPal" Grid.Column="0" HorizontalOptions="CenterAndExpand"  x:Name="MostrarPaypal"  Clicked="MostrarPaypal_Clicked" Style="{StaticResource FollowButton}"/>
+                        <Button Text="Efectivo" Grid.Column="1" HorizontalOptions="CenterAndExpand" x:Name="MostrarEfectivo" Clicked="MostrarEfectivo_Clicked" Style="{StaticResource FollowButton}"/>
+                        <Button Text="Tarjeta" Grid.Column="2" HorizontalOptions="CenterAndExpand" x:Name="MostrarCredito" Clicked="MostrarCredito_Clicked" Style="{StaticResource FollowButton}"/>
+                    </Grid>
+                    
+                    <StackLayout HorizontalOptions="CenterAndExpand" IsVisible="False" x:Name="Paypal">
+                        <Label TextColor="White" Text=" Usa el servicio de paypal" Style="{StaticResource StatsCaptionLabel}"/>
+                    </StackLayout>
+                    <StackLayout IsVisible="False" x:Name="Efectivo" >
+                        <Label HorizontalOptions="CenterAndExpand" TextColor="White" Text="Se generárá un codigo QR que le servirá como ticket " Style="{StaticResource StatsCaptionLabel}"/>
+                    </StackLayout>
+                    <StackLayout IsVisible="False" x:Name="Tarjetadecredito" >
+                        <Label HorizontalOptions="CenterAndExpand" TextColor="White" Text="Tarjeta de crédito" Style="{StaticResource StatsCaptionLabel}"/>
+                        <StackLayout>
+                            <StackLayout >
+                                <Entry BackgroundColor="Gray" Opacity=".5" Placeholder="Numero de la tarjeta de credito" PlaceholderColor="White"/>
+                            </StackLayout>
+                            <Entry BackgroundColor="Gray" Opacity=".5" Placeholder="Nombre del titular de la tarjeta" PlaceholderColor="White"/>
+                            <Label TextColor="White" Text="Codigo de Seguridad(CVV)" Style="{StaticResource StatsCaptionLabel}"/>
+                            <Entry BackgroundColor="Gray" Opacity=".5" Placeholder="Codigo de Seguridad" PlaceholderColor="White"/>
+                        </StackLayout>
+                    </StackLayout >
+                </StackLayout>
+                <StackLayout  Padding="20" VerticalOptions="End">
+                    <Button x:Name="BotonCompra" Margin="5" Text="Ok"  BackgroundColor="Azure" Clicked="BotonCompra_Clicked" Style="{StaticResource FollowButton}" VerticalOptions="CenterAndExpand"/>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

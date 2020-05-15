@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Appnimalv2.Views.agendar"
+             BackgroundImageSource="fpr.png">
+    <ContentPage.Content>
+        <Frame  BorderColor="Green"
+                   Margin="10"
+                   BackgroundColor="Black" Opacity=".8" HasShadow="True" >
+            <StackLayout>
+                <Label x:Name="userr" IsVisible="False"/>
+                <Label Text="Agendar visita" Style="{StaticResource ProfileNameLabel}" TextColor="White" FontSize="30"/>
+                
+
+                <Label Text="Fecha" Style="{StaticResource MainBodyLabel}" TextColor="White" FontSize="22"/>
+                <DatePicker x:Name="fecha" DateSelected="fecha_DateSelected" Format="d" 
+            MaximumDate="12/31/2025" BackgroundColor="Gray" TextColor="White" FontSize="22" Opacity=".6"/>
+                <Label Text="Hora: " Style="{StaticResource MainBodyLabel}" TextColor="White" FontSize="22"/>
+                <TimePicker x:Name="hora" Opacity=".6"  PropertyChanged="hora_PropertyChanged" TextColor="White" BackgroundColor="Gray" FontSize="22" />
+                <Label Text="Cantidad de personas: " Style="{StaticResource MainBodyLabel}" TextColor="White" FontSize="22"/>
+                <Picker x:Name="cantidad" BackgroundColor="Gray" Opacity=".6" TextColor="White">
+                    <Picker.Items>
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                        <x:String>6</x:String>
+                        <x:String>7</x:String>
+                        <x:String>8</x:String>
+                        <x:String>9</x:String>
+                        <x:String>10</x:String>
+                        <x:String>11</x:String>
+                        <x:String>12</x:String>
+                        <x:String>13</x:String>
+                        <x:String>14</x:String>
+                        <x:String>15</x:String>
+                        <x:String>16</x:String>
+                        <x:String>17</x:String>
+                        <x:String>18</x:String>
+                        <x:String>19</x:String>
+                        <x:String>20</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Button Text="Agendar" Style="{StaticResource FollowButton}" TextColor="Black" x:Name="agendarxd" Clicked="agendarxd_Clicked"/>
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

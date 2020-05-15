@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Appnimalv2.Views.Login" BackgroundImageSource="fpr.png">
+    <ContentPage.Content>
+        <Frame
+            BorderColor="Transparent"
+                   Margin="10,0,10,25"
+                   BackgroundColor="Transparent" Opacity=".8" HasShadow="True">
+            <StackLayout Padding="10">
+                <StackLayout x:Name="botones" VerticalOptions="End">
+                    <Button Text="Iniciar sesión" Style="{StaticResource FollowButton}" x:Name="mostrariniciar" Clicked="mostrariniciar_Clicked" Padding="10"/>
+                    <Button Text="Registrarse" Style="{StaticResource FollowButton}" x:Name="mostrarregistrar" Clicked="mostrarregistrar_Clicked" Padding="10"/>
+                </StackLayout>
+
+                <StackLayout x:Name="Iniciarsesion" IsVisible="False" VerticalOptions="End" Opacity="1">
+                    <StackLayout Opacity=".8" BackgroundColor="Black">
+                        <Label Padding="10, 0, 10,0" Text="Correo: " Style="{StaticResource MainBodyLabel}" TextColor="White" HorizontalOptions="Start"  FontSize="22"/>
+                        <Entry  TextColor="White" Margin="10" WidthRequest="50" BackgroundColor="Black" Opacity=".6" x:Name="user" Placeholder="Ingrese correo" PlaceholderColor="White"  FontSize="22"/>
+                        <Label Padding="10, 0, 10,0" Text="Contraseña: " Style="{StaticResource MainBodyLabel}" TextColor="White" HorizontalOptions="Start"  FontSize="22"/>
+                        <Entry TextColor="White"  Margin="10" WidthRequest="50" BackgroundColor="Black" Opacity=".6" x:Name="pass" IsPassword="true" Placeholder="Ingrese contraseña" PlaceholderColor="White"  FontSize="22"/>
+                    </StackLayout>
+                    <Button Text="Iniciar sesión" Style="{StaticResource FollowButton}" x:Name="sesioniniciada" Clicked="sesioniniciada_Clicked"/>
+                </StackLayout>
+
+                <StackLayout x:Name="registrarse" IsVisible="False" VerticalOptions="End" Opacity="1" >
+                    <StackLayout Opacity=".8" BackgroundColor="Black">
+                        <Label  Padding="10, 0, 10,0" Text="Nombre: " Style="{StaticResource MainBodyLabel}" TextColor="White" HorizontalOptions="Start" FontSize="22"/>
+                        <Entry x:Name="lblnombre" Margin="10" TextColor="White" WidthRequest="150" BackgroundColor="Black"  Opacity=".6" FontSize="22"  Placeholder="Ingrese nombre" PlaceholderColor="White"/>
+                        <Label  Padding="10, 0, 10,0" Text="Apellido: " Style="{StaticResource MainBodyLabel}" TextColor="White" HorizontalOptions="Start" FontSize="22"/>
+                        <Entry x:Name="lblapellido" Margin="10" TextColor="White" WidthRequest="150" BackgroundColor="Black" FontSize="22"  Opacity=".6" Placeholder="Ingrese apellido" PlaceholderColor="White"/>
+                        <Label  Padding="10, 0, 10,0" Text="Correo: " Style="{StaticResource MainBodyLabel}" TextColor="White" HorizontalOptions="Start" FontSize="22"/>
+                        <Entry TextColor="White" WidthRequest="200" Margin="10" BackgroundColor="Black" x:Name="entry_correo" FontSize="22" Opacity=".6" Placeholder="Ingrese correo" PlaceholderColor="White"/>
+                        <Label  Padding="10, 0, 10,0" Text="Contraseña: " Style="{StaticResource MainBodyLabel}" TextColor="White" FontSize="22" HorizontalOptions="Start"/>
+                        <Entry TextColor="White" WidthRequest="150" Margin="10" x:Name="lblcontraseña" BackgroundColor="Black"  FontSize="22" IsPassword="True" Opacity=".6" Placeholder="Ingrese contraseña" PlaceholderColor="White"/>
+                    </StackLayout>
+                    <Button Text="Registrarse ahora" Style="{StaticResource FollowButton}" x:Name="btn_registar" Clicked="btn_registar_Clicked"/>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>
