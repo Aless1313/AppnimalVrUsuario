@@ -6,6 +6,7 @@
              mc:Ignorable="d"
              x:Class="Appnimalv2.MainPage"
              BackgroundImageSource="fpr.png">
+    
     <StackLayout>
         <Label x:Name="userr" IsVisible="False"/>
         <ImageButton Source="usuario.png"
@@ -26,6 +27,7 @@
             <Button Text="Horarios" x:Name="Btn_horario" Clicked="Btn_horario_Clicked"  Style="{StaticResource FollowButton}" Padding="5,1,5,1"/>
             <Button Text="Mapa del Zoologico"  Style="{StaticResource FollowButton}" Padding="5,0,5,0" x:Name="mapa" Clicked="mapa_Clicked"/>
             <Button Text="Descubre +" x:Name="btn_descubre" Clicked="btn_descubre_Clicked"  Style="{StaticResource FollowButton}" Padding="5,1,5,1"/>
+            <Button Text="Juego Quiz" x:Name="btn_quiz" Clicked="btn_quiz_Clicked"  Style="{StaticResource FollowButton}" Padding="5,1,5,1"/>
             <Button Text="Promociones y paquetes" x:Name="promo" Clicked="promo_Clicked"  Style="{StaticResource FollowButton}" Padding="5,1,5,1"/>
         </StackLayout>
     </StackLayout>

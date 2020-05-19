@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "HHN+HpHij4dEizZAa9JtdISp4PNDerVzKUx5q4mJEjiWRQabdJaZn31TCy9E1IFugSj1ZoXjVLDXoS8oZBvN0w==",
+  "dgSpecHash": "XVcqcybbptlYB7ZgBVtLB6WjJtkAiP4a39cqfXiAezmSceX7Hg1p0qha6BLtkCfRRr+w6TXbge9f/G5jUweSSg==",
   "success": true,
   "projectFilePath": "E:\\Appnimalv2\\Appnimalv2\\Appnimalv2\\Appnimalv2.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\aless\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\aless\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\aless\\.nuget\\packages\\xam.plugins.texttospeech\\4.0.0.7\\xam.plugins.texttospeech.4.0.0.7.nupkg.sha512",
     "C:\\Users\\aless\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.4.0.991265\\xamarin.forms.4.4.0.991265.nupkg.sha512",
     "C:\\Users\\aless\\.nuget\\packages\\zxing.net.mobile\\2.4.1\\zxing.net.mobile.2.4.1.nupkg.sha512",

@@ -18,7 +18,7 @@
                     </Label>
                     <Image  Source="QR.png"></Image>
 
-                    <StackLayout Padding="15" >
+                    <StackLayout Padding="10" >
 
                         <Label  TextColor="White" Text="Paso 1. Escanea el código QR que viene en la parte del mostrador con la ayuda de el botón que abre tu cámara" Style="{StaticResource MainBodyLabel}"></Label>
 
@@ -28,6 +28,8 @@
 
                         <Button x:Name="BotonScaner" Clicked="BotonScaner_Clicked_1" Text="Escanear codigo QR" Style="{StaticResource FollowButton}" TextColor="Black"></Button>
                     </StackLayout >
+                   
+                    
                 </StackLayout>
             </Frame>
         </ScrollView>

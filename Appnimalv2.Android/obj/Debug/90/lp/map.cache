@@ -51,3 +51,4 @@ ZXing.Net.Mobile.Forms
 zxing.portable
 ZXingNetMobile
 netstandard
+Plugin.TextToSpeech

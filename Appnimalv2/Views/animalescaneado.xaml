@@ -8,19 +8,36 @@
              Title="Información"
              BackgroundColor="Green">
     <ContentPage.Content>
-        <Frame
-        BorderColor="Green"
+        <ScrollView>
+    
+                <Frame BorderColor="Green"
                    Margin="5"
                    BackgroundColor="Black" Opacity=".8" HasShadow="True">
-            <StackLayout>
-                <Label
-                VerticalOptions="StartAndExpand" 
-                HorizontalOptions="CenterAndExpand" 
-                   x:Name="lbl_animal" Style="{StaticResource ProfileTagLabel}" TextColor="White" FontSize="35"/>
-                <Image x:Name="imagenanimal" WidthRequest="500" HeightRequest="400" VerticalOptions="Start"/>
-                <Label x:Name="lbl_Info" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" HorizontalTextAlignment="Center" Style="{StaticResource MainBodyLabel}" TextColor="White"/>
-                <Label x:Name="lbl_curiosidad" VerticalOptions="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center" Style="{StaticResource MainBodyLabel}" TextColor="White"/>
-            </StackLayout> 
-        </Frame>
+                    <StackLayout>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Label VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Grid.Row="0"
+                                   x:Name="lbl_animal" Style="{StaticResource ProfileTagLabel}" TextColor="White" FontSize="35"/>
+                            <Image x:Name="imagenanimal" WidthRequest="500" HeightRequest="400" VerticalOptions="Start" Grid.Row="1"/>
+                            <Label Grid.Row="2"  x:Name="lbl_Info" VerticalOptions="End" HorizontalOptions="Center" HorizontalTextAlignment="Center" Style="{StaticResource MainBodyLabel}" TextColor="White"/>
+                            <Label Grid.Row="3" x:Name="lbl_curiosidad" VerticalOptions="End" HorizontalOptions="Center" HorizontalTextAlignment="Center" Style="{StaticResource MainBodyLabel}" TextColor="White"/>
+                        </Grid>
+
+                    <StackLayout>
+                        
+                        <Button Text="Idioma" x:Name="btn_idioma" Style="{StaticResource FollowButton}" Clicked="btn_idioma_Clicked"/>
+                        <Button Text="Hablar/Speak" x:Name="btn_speak" Style="{StaticResource FollowButton}" Clicked="btn_speak_Clicked"/>
+  
+                    </StackLayout>
+                    </StackLayout>
+                
+                </Frame>
+     
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

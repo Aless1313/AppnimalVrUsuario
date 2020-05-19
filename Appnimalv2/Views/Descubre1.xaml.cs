@@ -42,6 +42,7 @@ namespace Appnimalv2.Views
         {
             Scanner();
         }
+
         
     }
 }

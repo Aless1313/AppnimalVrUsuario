@@ -1,12 +1,15 @@
 ﻿using Microsoft.Win32.SafeHandles;
+using Plugin.TextToSpeech;
+using Plugin.TextToSpeech.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,10 +18,11 @@ namespace Appnimalv2.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class animalescaneado : ContentPage
     {
-
+        static CrossLocale? locale = null;
         public animalescaneado(string animal)
         {
             InitializeComponent();
+
 
             switch (animal)
             {
@@ -112,8 +116,11 @@ namespace Appnimalv2.Views
         }
 
 
-        public void llamas()
+        public async void llamas()
         {
+           
+            await CrossTextToSpeech.Current.Speak(lbl_Info.Text, pitch: 1.0f, speakRate: 5, volume: 75f);
+
             lbl_animal.Text = "Llamas";
             lbl_Info.Text= "La llama es el pariente sudamericano del camello, aunque no tiene joroba. " +
                 "Es un animal muy fuerte que fue domesticado por los habitantes de los Andes. " +
@@ -133,11 +140,8 @@ namespace Appnimalv2.Views
             lbl_Info.Text = "El addax (Addax nasomaculatus) es una especie de mamífero artiodáctilo de la familia Bovidae" +
                 " Al igual que el resto de los miembros de su subfamilia (Hippotraginae), es un antílope de 1 m de altura" +
                 " y unos 120 kg de peso, formas redondeadas, patas largas y perfil recto; no obstante no presenta " +
-                "los mismos caracteres equinoides del resto de la familia siendo más parecido a un antílope convencional. " +
-                "La máscara facial tiene forma de una X de color blanco implantada sobre la frente y ojos en contraste con su frente oscuro." +
-                " Su cuernos, aunque fuertemente anillados, de crecimiento vertical y presentes en ambos géneros, se enroscan sobre sí mismos " +
-                "en forma de espiral, característica que no comparte con el resto de sus parientes.";
-            lbl_Info.Text= "¿Sabias qué? A pesar de que no tienen un gran sentido de la vista" +
+                "los mismos caracteres equinoides del resto de la familia siendo más parecido a un antílope convencional.";
+            lbl_Info.Text= "¿Sabias qué? A pesar de que no tienen un gran sentido de la vista " +
                 "estos animales suelen salir en busca de comida cuando cae la noche para protegerse del calor diurno.";
             imagenanimal.Source = "https://www.elmundo.cr/wp-content/uploads/2017/10/antilope-Adax-conservaci%C3%B3n-Alemania.jpg";
         }
@@ -345,6 +349,7 @@ namespace Appnimalv2.Views
             lbl_curiosidad.Text = "¿Sabias qué? Su longevidad está entre los treinta y cuarenta años, " +
                 "aunque en cautividad pueden llegar a cumplir cincuenta años.";
             imagenanimal.Source = "https://sooluciona.com/wp-content/uploads/2018/12/alas-del-avestruz.jpg";
+            
         }
 
         public void muntiaco()
@@ -357,6 +362,7 @@ namespace Appnimalv2.Views
                 "Muntíaco negro, Muntíaco de Fea, Muntíaco de Gongshan, Muntíaco de la India, Muntíaco de Hukawng, " +
                 "Muntíaco de Reeves, Muntiaco de Truong Son";
             imagenanimal.Source = "http://2.bp.blogspot.com/-dyLMRJTdGRY/VEm82OReP7I/AAAAAAAAPUU/Wk0zX4Y3Gvk/s1600/muntiaco-india-hierba.jpg";
+            
         }
 
         public void canguro()
@@ -383,10 +389,42 @@ namespace Appnimalv2.Views
                 " de la vista, estos animales suelen salir en busca de comida cuando cae " +
                 "la noche para protegerse del calor diurno. ";
             imagenanimal.Source = "https://www.nationalgeographic.com.es/medio/2018/02/27/rino__1280x720.jpg";
+       
         }
 
+        private async void btn_idioma_Clicked(object sender, EventArgs e)
+        {
+            var locales = await CrossTextToSpeech.Current.GetInstalledLanguages();
+            var items = locales.Select(a => a.ToString()).ToArray();
+            var selected = await DisplayActionSheet("Idioma", "Ok", null, items);
+
+            if(string.IsNullOrWhiteSpace(selected) || selected=="Ok")
+            {
+                return;
+            }
+
+            if(Device.RuntimePlatform == Device.Android)
+            {
+                locale = locales.FirstOrDefault(l => l.ToString() == selected);
+            }
+        }
+        
+        private async void btn_speak_Clicked(object sender, EventArgs e)
+        {
+            btn_speak.IsEnabled = false;
+            var text = lbl_Info.Text;
+
+            
+
+            await CrossTextToSpeech.Current.Speak(text, pitch: 1, speakRate: 1, volume: 2, crossLocale: locale);
+            btn_speak.IsEnabled = true;
 
 
+        }
+
+     
+
+       
     }
 
 }

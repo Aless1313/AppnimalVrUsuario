@@ -55,5 +55,9 @@ namespace Appnimalv2
             Navigation.PushAsync(new Mapa());
         }
 
+        private void btn_quiz_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new GameStart());
+        }
     }
 }
