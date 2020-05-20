@@ -1,4 +1,5 @@
-﻿using Appnimalv2.Views.Questions;
+﻿using Appnimalv2.Clases;
+using Appnimalv2.Views.Questions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,9 +16,12 @@ namespace Appnimalv2.Views
     public partial class Quiz : ContentPage
     {
         public int zoocoins = 0;
-        public Quiz()
+        public int bien = 0;
+        public Quiz(string user)
         {
+            
             InitializeComponent();
+            usertest.Text = user;
             pregunta();
         }
         
@@ -33,15 +37,19 @@ namespace Appnimalv2.Views
     
         private void opc1_Clicked(object sender, EventArgs e)
         {
+
+            bien = bien + 1;
             zoocoins = zoocoins + 2;
             DisplayAlert("Correcto", "Tienes " + zoocoins + " zoocoins", "Aceptar");
-            Navigation.PushAsync(new Quiz1(zoocoins));
+            Navigation.PushAsync(new Quiz1(usertest.Text.ToString(), zoocoins, bien));
         }
 
         private void opc2_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Inorrecto", "Suerte para la proxima", "Aceptar");
-            Navigation.PushAsync(new Quiz1(zoocoins));
+            bien = bien+0;
+            zoocoins = zoocoins + 0;
+            DisplayAlert("Incorrecto", "Suerte para la proxima", "Aceptar");
+            Navigation.PushAsync(new Quiz1(usertest.Text.ToString(), zoocoins, bien));
         }
 
         protected override bool OnBackButtonPressed()
@@ -56,7 +64,7 @@ namespace Appnimalv2.Views
                 if (result)
                 {
                     //other methods
-                    await Navigation.PushAsync(new GameStart());
+                    await Navigation.PushAsync(new MainPage(usertest.Text.ToString()));
                 }
 
             });

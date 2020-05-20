@@ -12,14 +12,16 @@ namespace Appnimalv2.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class GameStart : ContentPage
     {
-        public GameStart()
+        public GameStart(string usuario)
         {
+           
             InitializeComponent();
+            usertest.Text = usuario;
         }
 
         private void iniciar_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Quiz());
+            Navigation.PushAsync(new Quiz(usertest.Text.ToString()));
         }
     }
 }

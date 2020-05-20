@@ -71,5 +71,11 @@ namespace Appnimalv2.Clases
             var result = await client.GetAsync(URL + "agendar.php?iduser=" + iduser + "&dia=" + hora + "&hora=" + dia + "&cantidad=" + cantidad);
         }
 
+        public async void puntos(string iduser, int a)
+        {
+            HttpClient client = getClient();
+            var result = await client.GetAsync(URL + "puntos.php?puntos=" + a + "&iduser=" + iduser);
+        }
+
     }
 }

@@ -4,7 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Appnimalv2.Views.Questions.Quiz1">
+             x:Class="Appnimalv2.Views.Questions.Quiz1"
+             Title="2/20"  BackgroundColor="Green">
     <ContentPage.Content>
         <ScrollView>
             <Frame BorderColor="Green"
@@ -14,6 +15,7 @@
                     <Label FontSize="Large" TextColor="White" x:Name="npregunta" HorizontalOptions="CenterAndExpand" Style="{StaticResource ProfileNameLabel}" >
 
                     </Label>
+                    <Label x:Name="usertest" IsVisible="False"/>
                     <Label  TextColor="White" x:Name="preguntatext" Style="{StaticResource MainBodyLabel}"></Label>
 
                     <StackLayout VerticalOptions="CenterAndExpand" HeightRequest="800">

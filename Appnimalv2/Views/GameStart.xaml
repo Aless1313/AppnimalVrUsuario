@@ -16,6 +16,8 @@
                     <Label FontSize="Large" TextColor="White" Text="Quiz" HorizontalOptions="CenterAndExpand" Style="{StaticResource ProfileNameLabel}" >
 
                     </Label>
+                    
+                    <Label x:Name="usertest" IsVisible="False"/>
                     <Image Source="quiz.jpg" WidthRequest="400" HeightRequest="250"/>
 
                     <StackLayout Padding="10" >
@@ -24,8 +26,8 @@
 
                         <Label  FontAttributes="Bold" TextColor="White" Text="Contesta cada pregunta correctamente" Style="{StaticResource MainBodyLabel}"></Label>
 
-                        <Label TextColor="White" Text="Cada pregunta correcta genera dos ZooCoins" Style="{StaticResource MainBodyLabel}"></Label>
-
+                        <Label TextColor="White" Text="Cada pregunta correcta genera 2 ZooCoins" Style="{StaticResource MainBodyLabel}"></Label>
+                        <Label  FontAttributes="Bold" TextColor="White" Text="*Asegurate de tener una conexión a internet" Style="{StaticResource MainBodyLabel}"></Label>
                         <Button x:Name="iniciar" Clicked="iniciar_Clicked" Text="Comenzar" Style="{StaticResource FollowButton}" TextColor="Black"></Button>
                     </StackLayout >
 

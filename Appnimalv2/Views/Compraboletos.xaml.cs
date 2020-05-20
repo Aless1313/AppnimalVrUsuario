@@ -15,9 +15,10 @@ namespace Appnimalv2
         string[] opciones = { "Paypal", "Efectivo" };
         public int Total;
 
-        public Compraboletos()
+        public Compraboletos(string user)
         {
             InitializeComponent();
+            userrr.Text = user;
         }
 
         private void MostrarPaypal_Clicked(object sender, EventArgs e)
@@ -66,7 +67,7 @@ namespace Appnimalv2
                     MainViewModel.GetInstance().menus2 = new MenuViewModel();
                     await Application.Current.MainPage.Navigation.PushAsync(new TicketPage());
                     */
-                    await Navigation.PushAsync(new TicketPage());
+                    await Navigation.PushAsync(new TicketPage(userrr.Text.ToString()));
                 }
                 else
                 {
@@ -80,6 +81,11 @@ namespace Appnimalv2
                     }
                 }
             }
-        }         
+        }
+
+        private async void zooc_Clicked(object sender, EventArgs e)
+        {
+            await DisplayAlert("Exito", "Compra realizada", "Aceptar");
+        }
     }
 }

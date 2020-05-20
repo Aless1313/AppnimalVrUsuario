@@ -65,7 +65,7 @@
                                                 <ColumnDefinition Width="*"/>
                                                 <ColumnDefinition Width="*"/>
                                             </Grid.ColumnDefinitions>
-                                            <Label Text="Puntos acumulados: " Style="{StaticResource ProfileNameLabel}" FontSize="25" Grid.Column="0"/>
+                                            <Label Text="Zoocoins: " Style="{StaticResource ProfileNameLabel}" FontSize="25" Grid.Column="0" HorizontalOptions="Start"/>
                                             <Label Text="{Binding puntos}" TextColor="White" Style="{StaticResource ProfileNameLabel}" Grid.Column="1" FontSize="25" VerticalTextAlignment="End"/>
                                         </Grid>
                                     </StackLayout>

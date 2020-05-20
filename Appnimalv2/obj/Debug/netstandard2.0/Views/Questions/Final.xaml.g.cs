@@ -8,37 +8,33 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Appnimalv2.Views.Questions.Quiz8.xaml", "Views/Questions/Quiz8.xaml", typeof(global::Appnimalv2.Views.Questions.Quiz8))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Appnimalv2.Views.Questions.Final.xaml", "Views/Questions/Final.xaml", typeof(global::Appnimalv2.Views.Questions.Final))]
 
 namespace Appnimalv2.Views.Questions {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\Questions\\Quiz8.xaml")]
-    public partial class Quiz8 : global::Xamarin.Forms.ContentPage {
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Label npregunta;
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\Questions\\Final.xaml")]
+    public partial class Final : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Label usertest;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Label preguntatext;
+        private global::Xamarin.Forms.Label puntosa;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.ImageButton opc1;
+        private global::Xamarin.Forms.Label zooa;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.ImageButton opc2;
+        private global::Xamarin.Forms.Button aceptar;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(Quiz8));
-            npregunta = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "npregunta");
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(Final));
             usertest = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "usertest");
-            preguntatext = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "preguntatext");
-            opc1 = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ImageButton>(this, "opc1");
-            opc2 = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ImageButton>(this, "opc2");
+            puntosa = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "puntosa");
+            zooa = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "zooa");
+            aceptar = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "aceptar");
         }
     }
 }

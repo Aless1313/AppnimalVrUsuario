@@ -12,10 +12,11 @@ namespace Appnimalv2
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TicketPage : ContentPage
     {
-        public TicketPage()
+        public TicketPage(string ausu)
         {
            
             InitializeComponent();
+            Text.Text = ausu;
             
         }
 
@@ -27,11 +28,12 @@ namespace Appnimalv2
 
         private void generateqr_Clicked(object sender, EventArgs e)
         {
+            string a = Text.Text;
 
             // TODO Implement error handling and 
             codigo.IsVisible = true;
 
-            BarcodeImageView.BarcodeValue = $"WIFI:S:{"aaa"};T:{"aaa"};P:{"aaa"};{"aaa"};Total:{"aaa"}; Adultos:{"aaa"}, Niños:{"aaa"}";
+            BarcodeImageView.BarcodeValue = a;
 
             BarcodeImageView.IsVisible = true;
         }

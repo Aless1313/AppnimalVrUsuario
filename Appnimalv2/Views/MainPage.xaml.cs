@@ -20,13 +20,14 @@ namespace Appnimalv2
            
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
+            
             string a = Convert.ToString(b);
             userr.Text = a;
         }
 
         private void btn_comprar_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Compraboletos());
+            Navigation.PushAsync(new Compraboletos(userr.Text.ToString()));
         }
 
         private void Btn_horario_Clicked(object sender, EventArgs e)
@@ -57,7 +58,7 @@ namespace Appnimalv2
 
         private void btn_quiz_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new GameStart());
+            Navigation.PushAsync(new GameStart(userr.Text.ToString()));
         }
     }
 }

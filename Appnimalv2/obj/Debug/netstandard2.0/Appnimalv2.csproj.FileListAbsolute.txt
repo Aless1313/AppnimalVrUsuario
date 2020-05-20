@@ -43,3 +43,4 @@ E:\Appnimalv2\Appnimalv2\Appnimalv2\obj\Debug\netstandard2.0\Views\Questions\Qui
 E:\Appnimalv2\Appnimalv2\Appnimalv2\obj\Debug\netstandard2.0\Views\Questions\Quiz7.xaml.g.cs
 E:\Appnimalv2\Appnimalv2\Appnimalv2\obj\Debug\netstandard2.0\Views\Questions\Quiz8.xaml.g.cs
 E:\Appnimalv2\Appnimalv2\Appnimalv2\obj\Debug\netstandard2.0\Views\Questions\Quiz9.xaml.g.cs
+E:\Appnimalv2\Appnimalv2\Appnimalv2\obj\Debug\netstandard2.0\Views\Questions\Final.xaml.g.cs

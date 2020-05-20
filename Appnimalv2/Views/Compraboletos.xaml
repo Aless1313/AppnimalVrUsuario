@@ -30,6 +30,8 @@
                     <Label FontSize="Small" Grid.Row="1" Grid.Column="2" Text="Mayores de 12 años" HorizontalTextAlignment="Center" HorizontalOptions="Center" Style="{StaticResource MainBodyLabel}" TextColor="White"></Label>
                     <Label FontSize="Small" Grid.Row="2" Grid.Column="2" Text="$30"  HorizontalTextAlignment="Center" HorizontalOptions="Center" Style="{StaticResource MainBodyLabel}" TextColor="White"></Label>
                 </Grid>
+
+                <Label x:Name="userrr" IsVisible="False" />
                 <StackLayout VerticalOptions="Center">
                     <Label Text="Selecciona cantidad" TextColor="Black" HorizontalOptions="Center"/>
                     <Grid>
@@ -53,11 +55,14 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
 
                         <Button Text="PayPal" Grid.Column="0" HorizontalOptions="CenterAndExpand"  x:Name="MostrarPaypal"  Clicked="MostrarPaypal_Clicked" Style="{StaticResource FollowButton}"/>
                         <Button Text="Efectivo" Grid.Column="1" HorizontalOptions="CenterAndExpand" x:Name="MostrarEfectivo" Clicked="MostrarEfectivo_Clicked" Style="{StaticResource FollowButton}"/>
                         <Button Text="Tarjeta" Grid.Column="2" HorizontalOptions="CenterAndExpand" x:Name="MostrarCredito" Clicked="MostrarCredito_Clicked" Style="{StaticResource FollowButton}"/>
+                        <Button Text="Zoocoins" Grid.Column="3" HorizontalOptions="CenterAndExpand" x:Name="zooc" Clicked="zooc_Clicked" Style="{StaticResource FollowButton}"/>
                     </Grid>
                     
                     <StackLayout HorizontalOptions="CenterAndExpand" IsVisible="False" x:Name="Paypal">

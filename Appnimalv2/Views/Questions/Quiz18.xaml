@@ -4,12 +4,35 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Appnimalv2.Views.Questions.Quiz18">
+             x:Class="Appnimalv2.Views.Questions.Quiz18"
+             Title="19/20"  BackgroundColor="Green">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <Frame BorderColor="Green"
+                   Margin="10"
+                   BackgroundColor="Black" Opacity=".8" HasShadow="True">
+                <StackLayout>
+                    <Label FontSize="Large" TextColor="White" x:Name="npregunta" HorizontalOptions="CenterAndExpand" Style="{StaticResource ProfileNameLabel}" >
+
+                    </Label>
+                    <Label x:Name="usertest" IsVisible="False"/>
+                    <Label  TextColor="White" x:Name="preguntatext" Style="{StaticResource MainBodyLabel}"></Label>
+
+                    <StackLayout VerticalOptions="CenterAndExpand" HeightRequest="800">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Image x:Name="opc1"  Grid.Row="0" WidthRequest="300" HeightRequest="200"/>
+                            <Button Text="100 años"  Grid.Row="1" Style="{StaticResource FollowButton}" x:Name="res1" Clicked="res1_Clicked"/>
+                            <Button Text="150 años"  Grid.Row="2" Style="{StaticResource FollowButton}" x:Name="res2" Clicked="res2_Clicked"/>
+                            <Label x:Name="zoo" IsVisible="False"/>
+                        </Grid>
+                    </StackLayout >
+                </StackLayout>
+            </Frame>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
